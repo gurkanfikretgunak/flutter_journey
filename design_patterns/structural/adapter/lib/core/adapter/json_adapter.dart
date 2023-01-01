@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:adapter/core/adapter/i_contact_adapter.dart';
+import 'package:adapter/core/adapter/base/i_contact_adapter.dart';
 import 'package:adapter/core/api/json_contact.dart';
 import 'package:adapter/core/model/contact_model.dart';
 
