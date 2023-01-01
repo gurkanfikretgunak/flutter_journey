@@ -40,4 +40,8 @@ abstract class StockTicker {
       changeAmount: changeAmount,
     );
   }
+
+  void stopTicker() {
+    stockTimer.cancel();
+  }
 }
