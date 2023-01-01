@@ -1,7 +1,7 @@
 enum StockTickerAcronyms {
-  GME,
-  GOOGL,
-  TSLA,
+  THY,
+  ASELS,
+  FROTO,
 }
 
 extension StockTickerSymbolExtension on StockTickerAcronyms {
