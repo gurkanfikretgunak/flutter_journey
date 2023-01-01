@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:observer/core/enums/stock_change_direction.dart';
 import 'package:observer/core/enums/stock_ticker_acronyms.dart';
 import 'package:observer/core/stock/stock.dart';
-import 'package:observer/core/subscriber/stock_subscriber.dart';
+import 'package:observer/core/subscriber/base/stock_subscriber.dart';
 
 abstract class StockTicker {
   late final String stockTitle;

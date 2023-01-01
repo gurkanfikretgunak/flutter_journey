@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:observer/core/enums/stock_ticker_acronyms.dart';
-import 'package:observer/core/tickers/stock_ticker.dart';
+import 'package:observer/core/ticker/stock_ticker.dart';
 
 class ThyStockTicker extends StockTicker {
   ThyStockTicker() {

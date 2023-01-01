@@ -1,4 +1,4 @@
-import 'package:observer/core/tickers/stock_ticker.dart';
+import 'package:observer/core/ticker/stock_ticker.dart';
 
 class StockTickerModel {
   final StockTicker stockTicker;
