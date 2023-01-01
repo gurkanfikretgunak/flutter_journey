@@ -3,7 +3,7 @@ import 'package:adapter/core/api/xml_contact.dart';
 import 'package:adapter/core/model/contact_model.dart';
 import 'package:xml/xml.dart';
 
-class XmlContactAdapter extends IContactsAdapter {
+class XmlAdapter extends IContactsAdapter {
   final XmlContactsApi _api = XmlContactsApi();
 
   @override
@@ -27,7 +27,7 @@ class XmlContactAdapter extends IContactsAdapter {
       contactsList.add(Contact(
         name: name,
         surname: surname,
-        fullName: '$name + $surname',
+        fullName: '$name $surname',
         email: email,
         favourite: favourite,
       ));

@@ -4,8 +4,8 @@ class XmlContactsApi {
   <contacts>
     <contact>
       <name>Mehmet</name>
-      <surname>Beyaz</surname>
-      <email>mehmetbeyaz@xml.com</email>
+      <surname>Gunak</surname>
+      <email>mehmetgunak@xml.com</email>
       <favourite>false</favourite>
     </contact>
   </contacts>

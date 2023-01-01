@@ -4,8 +4,8 @@ class JsonContactsApi {
     "contacts": [
       { 
         "name":"Ali",
-        "surname":"Beyaz",
-        "email": "alibeyaz@json.com",
+        "surname":"Gunak",
+        "email": "aligunak@json.com",
         "favourite": true
       }
     ]
