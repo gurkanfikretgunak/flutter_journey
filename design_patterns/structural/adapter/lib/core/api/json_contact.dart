@@ -12,5 +12,5 @@ class JsonContactsApi {
   }
  ''';
 
-  String getContactXml() => _contacts;
+  String getContactJson() => _contacts;
 }
