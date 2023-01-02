@@ -1,4 +1,4 @@
-import 'package:chain_of_representation/core/enums/log_level.dart';
+import 'package:chain_of_representation/core/enum/log_level.dart';
 import 'package:flutter/material.dart';
 
 abstract class LoggerBase {

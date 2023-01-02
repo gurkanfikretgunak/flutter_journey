@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:collection';
 
-import 'package:chain_of_representation/core/message/log_label.dart';
+import 'package:chain_of_representation/core/label/log_label.dart';
 
 class LogLogic {
   final List<LogLabel> _logs = [];
