@@ -1,6 +1,4 @@
-import 'dart:developer';
-
-enum LogLevel {
+enum LogStatus {
   debug('Debug'),
   info('Info'),
   error('Error'),
@@ -8,9 +6,9 @@ enum LogLevel {
   wtf('WTF');
 
   final String value;
-  const LogLevel(this.value);
+  const LogStatus(this.value);
 }
 
-extension LogLevelExtension on LogLevel {
-  bool operator <=(LogLevel logLevel) => index <= logLevel.index;
+extension LogLevelExtension on LogStatus {
+  bool operator <=(LogStatus logLevel) => index <= logLevel.index;
 }
