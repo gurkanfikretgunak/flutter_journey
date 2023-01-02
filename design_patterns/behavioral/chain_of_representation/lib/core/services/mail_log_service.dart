@@ -13,26 +13,24 @@ import 'package:http/http.dart';
 
 class MailLogService {
   final LogLogic logLogic;
-  final String email;
-  final String mailUri;
 
-  MailLogService(this.logLogic, this.email, this.mailUri);
+  MailLogService(this.logLogic);
 
   void sendErrorMail(LogStatus logStatus, String label) {
     final logLabel = LogLabel(logStatus: logStatus, label: label);
 
-    _mailSender(email, mailUri, logLabel);
+    _mailSender(logLabel);
 
     logLogic.log(logLabel);
   }
 
-  _mailSender(String email, String mailUri, LogLabel logLabel) async {
+  _mailSender(LogLabel logLabel) async {
     Map<String, String> headers = {};
     headers["Authorization"] = "Bearer SENDGRIDAPIKEY";
     headers["Content-Type"] = "application/json";
     String url = 'https://api.sendgrid.com/v3/mail/send';
-    Response response = await http.post(Uri.parse(mailUri),
-        headers: headers, body: "$logLabel");
+    Response response =
+        await http.post(Uri.parse(url), headers: headers, body: "$logLabel");
     return response;
   }
 }
