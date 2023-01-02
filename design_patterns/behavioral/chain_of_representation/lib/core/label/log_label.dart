@@ -30,6 +30,7 @@ class LogLabel {
     return Text(
       '$_logStatusValue : $label',
       style: TextStyle(
+        fontSize: 12,
         color: _getLogRecordColor(),
         fontWeight: FontWeight.bold,
       ),

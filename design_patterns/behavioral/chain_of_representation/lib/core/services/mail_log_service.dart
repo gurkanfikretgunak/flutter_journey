@@ -19,7 +19,7 @@ class MailLogService {
   void sendErrorMail(LogStatus logStatus, String label) {
     final logLabel = LogLabel(logStatus: logStatus, label: label);
 
-    _mailSender(logLabel);
+    //_mailSender(logLabel);
 
     logLogic.log(logLabel);
   }
