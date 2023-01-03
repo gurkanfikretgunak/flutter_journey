@@ -6,9 +6,9 @@ class Figure {
   late double w;
   late int strokeW;
 
-  Figure._internal() {
-    color = Colors.blue;
-    h = 100.0;
+  Figure.initial() {
+    color = Colors.red;
+    h = 50.0;
     w = 50.0;
     strokeW = 3;
   }
