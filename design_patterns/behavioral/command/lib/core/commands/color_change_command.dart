@@ -22,7 +22,6 @@ class ColorChangeCommand implements BaseCommand {
     );
   }
 
-  @override
   String getFigureColorName() {
     return figure.color.toString();
   }
