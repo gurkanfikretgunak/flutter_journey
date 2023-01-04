@@ -28,6 +28,6 @@ class MaterialWidgetFac implements IWidgetsFac {
 
   @override
   String getPlatformLabel() {
-    return 'Andorid';
+    return 'Android';
   }
 }
