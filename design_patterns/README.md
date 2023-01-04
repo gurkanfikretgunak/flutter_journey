@@ -5,9 +5,9 @@ It is a work done within the scope of practice and explanation. Developed sample
 
 ## 📎 Sources
 
-<https://refactoring.guru/design-patterns>
-<https://en.wikipedia.org/wiki/Design_Patterns>
-<https://www.flutterdesignpatterns.com>
+- <https://refactoring.guru/design-patterns>
+- <https://en.wikipedia.org/wiki/Design_Patterns>
+- <https://www.flutterdesignpatterns.com>
 
 ## Feedback
 
