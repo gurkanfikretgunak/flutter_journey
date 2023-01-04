@@ -1,4 +1,4 @@
-import 'package:composite/core/widgets/base/file.dart';
+import 'package:composite/view/widgets/base/file.dart';
 import 'package:flutter/material.dart';
 
 class AudioFile extends BaseFile {
