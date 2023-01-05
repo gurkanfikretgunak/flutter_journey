@@ -29,4 +29,33 @@ class Linkeds<G> extends Iterable<G> {
     chain!.following = Node(value: value);
     chain = chain!.following;
   }
+
+  Node<G>? nodeConnect(int index) {
+    var currentNode = start;
+    var currentIndex = 0;
+    while (currentNode != null && currentIndex < index) {
+      currentNode = currentNode.following;
+      currentIndex += 1;
+    }
+    return currentNode;
+  }
+
+  Node<G> joinAfter(Node<G> node, G value) {
+    if (chain == node) {
+      append(value);
+      return chain!;
+    }
+    node.following = Node(value: value, following: node.following);
+    return node.following!;
+  }
+
+  G? pop() {
+    final value = start?.value;
+    start = start?.following;
+
+    if (isEmpty) {
+      chain = null;
+    }
+    return value;
+  }
 }
