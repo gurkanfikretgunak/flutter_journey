@@ -60,3 +60,12 @@ bool checkNaive(int intValue, List<int> anyIntValues) {
 
   return false;
 }
+
+int subTotalFromOneTo(int intValue) {
+  int subTotal = 0;
+  for (int i = 1; i <= intValue; i++) {
+    subTotal += i;
+  }
+
+  return subTotal;
+}
