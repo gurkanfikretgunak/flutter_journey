@@ -12,6 +12,7 @@ void main(List<String> arguments) {
   //bool result = checkValueExist(intValue, anyIntValues);
   //bool result = checkNaive(intValue, anyIntValues);
   //int result = betterSubTotalFromOneTo(intValue);
-  List<int> result = fillListGrowable(intValue, growableValue);
+  //List<int> result = fillListGrowable(intValue, growableValue);
+  List<int> result = multiplyListValue(intValue);
   print(result);
 }

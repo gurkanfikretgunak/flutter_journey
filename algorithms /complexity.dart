@@ -77,3 +77,7 @@ int betterSubTotalFromOneTo(int intValue) {
 List<int> fillListGrowable(int intValue, bool growableValue) {
   return List.filled(intValue, 0, growable: growableValue);
 }
+
+List<int> multiplyListValue(int intValue) {
+  return List.filled(intValue, 0 * intValue);
+}
