@@ -29,7 +29,7 @@ void main(List<String> arguments) {
   //maps(anyMapValues);
   //sets(anySetValues);
   /// [Stack]
-
+  /*
   final stackInt = Stack<int>();
   final stackString = Stack<String>();
 
@@ -53,4 +53,5 @@ void main(List<String> arguments) {
   // Pop Method - String
   final popStringResult = stackString.pop();
   print(popStringResult);
+  */
 }
