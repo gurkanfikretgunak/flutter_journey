@@ -69,3 +69,7 @@ int subTotalFromOneTo(int intValue) {
 
   return subTotal;
 }
+
+int betterSubTotalFromOneTo(int intValue) {
+  return intValue * (intValue + 1) ~/ 2;
+}

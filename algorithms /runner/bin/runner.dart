@@ -10,6 +10,6 @@ void main(List<String> arguments) {
   //getMoreValues(anyStringValues);
   //bool result = checkValueExist(intValue, anyIntValues);
   //bool result = checkNaive(intValue, anyIntValues);
-  int result = subTotalFromOneTo(intValue);
+  int result = betterSubTotalFromOneTo(intValue);
   print(result);
 }
