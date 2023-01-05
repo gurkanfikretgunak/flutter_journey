@@ -8,6 +8,7 @@ Map<String, int> anyMapValues = {
   'Richard': 2,
   'Carl': 2,
 };
+Set<String> anySetValues = {"Bob", "Micheal", "Richard"};
 List<int> anyIntValues = [1, 2, 3, 4, 5, 6];
 int intValue = 9;
 bool growableValue = true;
@@ -24,5 +25,6 @@ void main(List<String> arguments) {
   //List<int> result = multiplyListValue(intValue);
   /// [Basic Data Structures]
   //lists(anyStringValues);
-  maps(anyMapValues);
+  //maps(anyMapValues);
+  sets(anySetValues);
 }

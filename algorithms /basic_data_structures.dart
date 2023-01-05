@@ -18,3 +18,16 @@ void maps(Map<String, dynamic> anyMapValues) {
   final hashMap = HashMap.of(anyMapValues);
   print(hashMap);
 }
+
+void sets(Set<dynamic> anySetValues) {
+  anySetValues.add('Candy');
+  print(anySetValues);
+
+  final anyList = [1, 5, 5, 4, 3, 4, 4, 2];
+  final anySet = <int>{};
+  for (final value in anyList) {
+    if (anySet.contains(value)) {}
+    anySet.add(value);
+  }
+  print(anySet);
+}
