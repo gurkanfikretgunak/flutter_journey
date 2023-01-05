@@ -58,4 +58,30 @@ class Linkeds<G> extends Iterable<G> {
     }
     return value;
   }
+
+  G? removeLastOne() {
+    if (start?.following == null) return pop();
+
+    var current = start;
+    while (current!.following != chain) {
+      current = current.following;
+    }
+
+    final value = chain?.value;
+    chain = current;
+    chain?.following = null;
+    return value;
+  }
+
+  G? removeAfter(Node<G> node) {
+    final value = node.following?.value;
+    if (node.following == chain) {
+      chain = node;
+    }
+    node.following = node.following?.following;
+    return value;
+  }
+
+  @override
+  bool get isEmpty => start == null;
 }
