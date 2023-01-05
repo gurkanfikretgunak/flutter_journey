@@ -18,3 +18,16 @@ getValues(List<String> anyStringValues) {
     print('Dont have any String Value 🤷‍♂️ ');
   }
 }
+
+void getMoreValues(List<String> anyStringValues) {
+  if (anyStringValues.isNotEmpty) {
+    print('String Value Length: ${anyStringValues.length}');
+    for (final _ in anyStringValues) {
+      for (final anyString in anyStringValues) {
+        print(anyString);
+      }
+    }
+  } else {
+    print('Dont have any String Value 🤷‍♂️ ');
+  }
+}
