@@ -40,3 +40,23 @@ bool checkValueExist(int intValue, List<int> anyIntValues) {
   }
   return false;
 }
+
+bool checkNaive(int intValue, List<int> anyIntValues) {
+  print('Int list values : $anyIntValues');
+  print('Exist int value: $intValue');
+
+  if (anyIntValues.isEmpty) return false;
+  final middleIndex = anyIntValues.length ~/ 2;
+
+  if (intValue > anyIntValues[middleIndex]) {
+    for (var i = middleIndex; i < anyIntValues.length; i++) {
+      if (anyIntValues[i] == intValue) return true;
+    }
+  } else {
+    for (var i = middleIndex; i >= 0; i--) {
+      if (anyIntValues[i] == intValue) return true;
+    }
+  }
+
+  return false;
+}
