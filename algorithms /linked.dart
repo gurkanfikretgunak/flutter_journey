@@ -84,4 +84,40 @@ class Linkeds<G> extends Iterable<G> {
 
   @override
   bool get isEmpty => start == null;
+
+  @override
+  String toString() {
+    if (isEmpty) return 'Empty list';
+    return start.toString();
+  }
+
+  @override
+  // TODO: implement iterator
+  Iterator<G> get iterator => _LinkedsIterator(this);
+}
+
+class _LinkedsIterator<G> implements Iterator<G> {
+  _LinkedsIterator(Linkeds<G> list) : _list = list;
+  final Linkeds<G> _list;
+
+  Node<G>? _currentNode;
+
+  @override
+  G get current => _currentNode!.value;
+
+  bool _firstPass = true;
+
+  @override
+  bool moveNext() {
+    if (_list.isEmpty) return false;
+
+    if (_firstPass) {
+      _currentNode = _list.start;
+      _firstPass = false;
+    } else {
+      _currentNode = _currentNode?.following;
+    }
+
+    return _currentNode != null;
+  }
 }
