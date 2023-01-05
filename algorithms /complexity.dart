@@ -31,3 +31,12 @@ void getMoreValues(List<String> anyStringValues) {
     print('Dont have any String Value 🤷‍♂️ ');
   }
 }
+
+bool checkValueExist(int intValue, List<int> anyIntValues) {
+  print('Int list values : $anyIntValues');
+  print('Exist int value: $intValue');
+  for (final e in anyIntValues) {
+    if (e == intValue) return true;
+  }
+  return false;
+}
