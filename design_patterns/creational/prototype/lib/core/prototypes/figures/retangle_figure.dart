@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:prototype/core/prototypes/figures/base/base_figure.dart';
 
 class RetangleFigure extends BaseFigure {
@@ -23,7 +21,10 @@ class RetangleFigure extends BaseFigure {
     return RetangleFigure.dublicate(this);
   }
 
-  RetangleFigure.dublicate(RetangleFigure source) : super.dublicate(source) {
+  RetangleFigure.dublicate(RetangleFigure source)
+      : super.dublicate(
+          source,
+        ) {
     h = source.h;
     w = source.w;
   }
