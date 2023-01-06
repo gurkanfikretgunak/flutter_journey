@@ -26,6 +26,42 @@ class Queues<G> implements Queue<G> {
   }
 }
 
+class QueueStacks<G> implements Queue<G> {
+  final _leftStack = <G>[];
+  final _rightStack = <G>[];
+
+  @override
+  bool enqueue(G value) {
+    _rightStack.add(value);
+    return true;
+  }
+
+  @override
+  G? dequeue() {
+    if (_leftStack.isEmpty) {
+      _leftStack.addAll(_rightStack.reversed); // 1
+      _rightStack.clear(); // 2
+    }
+    if (_leftStack.isEmpty) return null;
+    return _leftStack.removeLast();
+  }
+
+  @override
+  bool get isEmpty => _leftStack.isEmpty && _rightStack.isEmpty;
+
+  @override
+  G? get first => _leftStack.isNotEmpty ? _leftStack.last : _rightStack.first;
+
+  @override
+  String toString() {
+    final mixer = [
+      ..._leftStack.reversed,
+      ..._rightStack,
+    ].join(', ');
+    return '[$mixer]';
+  }
+}
+
 class QueueLoopBuffer<G> implements Queue<G> {
   final LoopBuffer _loopBuffer;
 
