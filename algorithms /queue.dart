@@ -1,3 +1,5 @@
+import 'loop_buffer.dart';
+
 abstract class Queue<G> {
   bool enqueue(G queueValue);
   G? dequeue();
@@ -22,4 +24,30 @@ class Queues<G> implements Queue<G> {
     _queues.add(queueValue);
     return true;
   }
+}
+
+class QueueLoopBuffer<G> implements Queue<G> {
+  final LoopBuffer _loopBuffer;
+
+  QueueLoopBuffer(int length) : _loopBuffer = LoopBuffer<G>(length);
+
+  @override
+  G? dequeue() {
+    // TODO: implement dequeue
+    throw UnimplementedError();
+  }
+
+  @override
+  bool enqueue(G queueValue) {
+    // TODO: implement enqueue
+    throw UnimplementedError();
+  }
+
+  @override
+  // TODO: implement first
+  G? get first => throw UnimplementedError();
+
+  @override
+  // TODO: implement isEmpty
+  bool get isEmpty => throw UnimplementedError();
 }
