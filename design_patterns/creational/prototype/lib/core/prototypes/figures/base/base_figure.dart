@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-abstract class Figure {
+abstract class BaseFigure {
   late Color color;
 
-  Figure(this.color);
+  BaseFigure(this.color);
 
-  Figure.dublicate(Figure source) {
+  BaseFigure.dublicate(BaseFigure source) {
     color = source.color;
   }
 
-  Figure dublicate();
+  BaseFigure dublicate();
   void randomiseProperties();
   Widget render();
 }

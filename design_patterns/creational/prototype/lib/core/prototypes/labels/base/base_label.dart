@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-abstract class Label {
+abstract class BaseLabel {
   late Color color;
   late int size;
-  Label(this.color, this.size);
+  BaseLabel(this.color, this.size);
 
-  Label.dublicate(Label source) {
+  BaseLabel.dublicate(BaseLabel source) {
     color = source.color;
   }
 
-  Label dublicate();
+  BaseLabel dublicate();
   void randomiseProperties();
   Widget render();
 }
