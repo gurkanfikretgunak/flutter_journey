@@ -92,7 +92,6 @@ class Linkeds<G> extends Iterable<G> {
   }
 
   @override
-  // TODO: implement iterator
   Iterator<G> get iterator => _LinkedsIterator(this);
 }
 
