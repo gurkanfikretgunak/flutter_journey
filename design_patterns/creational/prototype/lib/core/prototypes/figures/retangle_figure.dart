@@ -13,8 +13,12 @@ class RetangleFigure extends BaseFigure {
   RetangleFigure.initial([
     super.color = Colors.purple,
   ]) {
-    h = 50;
-    w = 50;
+    h = 0;
+    w = 0;
+  }
+  RetangleFigure.placeholder([super.color = Colors.pink]) {
+    h = 75;
+    w = 75;
   }
   @override
   BaseFigure dublicate() {

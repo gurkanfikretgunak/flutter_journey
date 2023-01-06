@@ -24,6 +24,12 @@ class MixerLabel extends BaseLabel {
       super.label = 'Initial Label']) {
     fontWeight = FontWeight.bold;
   }
+  MixerLabel.placeholder(
+      [super.color = Colors.purple,
+      super.size = 4,
+      super.label = 'Place holder Label']) {
+    fontWeight = FontWeight.w100;
+  }
   MixerLabel.dublicate(MixerLabel source) : super.dublicate(source) {
     fontWeight = source.fontWeight;
   }
@@ -36,7 +42,7 @@ class MixerLabel extends BaseLabel {
   @override
   void randomiseProperties() {
     label = faker.person.name();
-    fontWeight = _fontWeights[random.nextInt(10)];
+    fontWeight = _fontWeights[random.nextInt(6)];
 
     color = Color.fromRGBO(
       random.nextInt(255),

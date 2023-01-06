@@ -11,7 +11,11 @@ class CircleFigure extends BaseFigure {
   CircleFigure(super.color, this.radiusValue);
 
   CircleFigure.initial([super.color = Colors.purple]) {
-    radiusValue = 13;
+    radiusValue = 0;
+  }
+
+  CircleFigure.placeholder([super.color = Colors.pink]) {
+    radiusValue = 40;
   }
 
   CircleFigure.dublicate(CircleFigure source) : super.dublicate(source) {
