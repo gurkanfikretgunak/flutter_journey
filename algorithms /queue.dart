@@ -32,22 +32,23 @@ class QueueLoopBuffer<G> implements Queue<G> {
   QueueLoopBuffer(int length) : _loopBuffer = LoopBuffer<G>(length);
 
   @override
-  G? dequeue() {
-    // TODO: implement dequeue
-    throw UnimplementedError();
-  }
+  G? dequeue() => _loopBuffer.record();
 
   @override
   bool enqueue(G queueValue) {
-    // TODO: implement enqueue
-    throw UnimplementedError();
+    if (queueValue != null && _loopBuffer.isDone) {
+      return false;
+    }
+    _loopBuffer.write(queueValue);
+    return true;
   }
 
   @override
-  // TODO: implement first
-  G? get first => throw UnimplementedError();
+  G? get first => _loopBuffer.first;
 
   @override
-  // TODO: implement isEmpty
-  bool get isEmpty => throw UnimplementedError();
+  bool get isEmpty => _loopBuffer.isEmpty;
+
+  @override
+  String toString() => _loopBuffer.toString();
 }
