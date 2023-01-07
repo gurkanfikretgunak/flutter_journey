@@ -8,22 +8,22 @@ class TreeNode<G> {
     children.add(child);
   }
 
-  void forEachLevelOrder(void Function(TreeNode<G> node) tracking) {
+  void forEachLevelOrder(void Function(TreeNode<G> node) move) {
     final queue = QueueStacks<TreeNode<G>>();
-    tracking(this);
+    move(this);
     children.forEach(queue.enqueue);
     var node = queue.dequeue();
     while (node != null) {
-      tracking(node);
+      move(node);
       node.children.forEach(queue.enqueue);
       node = queue.dequeue();
     }
   }
 
-  void forEachinFirst(void Function(TreeNode<G> node) tracking) {
-    tracking(this);
+  void forEachinFirst(void Function(TreeNode<G> node) move) {
+    move(this);
     for (final child in children) {
-      child.forEachinFirst(tracking);
+      child.forEachinFirst(move);
     }
   }
 
