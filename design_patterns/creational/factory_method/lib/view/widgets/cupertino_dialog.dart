@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CupertinoAlertDialogWidget extends BaseDialog {
   @override
   @override
-  Color getColor() => Colors.black;
+  Color getColor() => Colors.orange;
 
   @override
   String getTitle() => 'Cupertino Dialog Widget';
@@ -14,7 +14,7 @@ class CupertinoAlertDialogWidget extends BaseDialog {
   Widget create(BuildContext context) {
     return CupertinoAlertDialog(
       title: Text(getTitle()),
-      content: const Text(' Material Content label'),
+      content: const Text(' Cupertino Content label'),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),

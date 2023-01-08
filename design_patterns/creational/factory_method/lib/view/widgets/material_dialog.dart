@@ -1,5 +1,5 @@
+import 'package:factory_method/core/widgets/dialogs/base/base_dialog.dart';
 import 'package:flutter/material.dart';
-import 'base/base_dialog.dart';
 
 class MaterialAlertDialogWidget extends BaseDialog {
   @override
@@ -16,7 +16,7 @@ class MaterialAlertDialogWidget extends BaseDialog {
       );
 
   @override
-  Color getColor() => Colors.black;
+  Color getColor() => Colors.orangeAccent;
 
   @override
   String getTitle() => 'Material Dialog Widget';
